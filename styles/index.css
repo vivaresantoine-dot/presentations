@@ -1,0 +1,52 @@
+.slidev-layout {
+  --brand: #176b70;
+  --ink: #203047;
+  background: #f7f9fb;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 52px 64px;
+  border-top: 6px solid var(--brand);
+  font-size: 24px;
+  line-height: 1.5;
+}
+.slidev-layout h1 {
+  color: var(--ink);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 28px;
+}
+.slidev-layout.cover h1 { font-size: 54px; max-width: 780px; line-height: 1.15; }
+.slidev-layout h2 { color: var(--brand); font-size: 28px; }
+.slidev-layout p { margin: 18px 0; opacity: 1; }
+.slidev-layout h1 + p { opacity: 1; }
+.slidev-layout strong, .slidev-layout a { color: var(--brand); }
+.slidev-layout li { margin-bottom: 12px; }
+.slidev-layout .eyebrow {
+  color: var(--brand);
+  font-size: 15px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.slidev-layout .local-visual { width: 620px; height: 150px; margin-top: 24px; }
+.slidev-layout .counter {
+  background: white;
+  border: 1px solid #ccd9df;
+  border-radius: 12px;
+  padding: 22px 28px;
+  margin: 24px 0;
+}
+.slidev-layout .counter-actions { display: flex; align-items: center; gap: 20px; }
+.slidev-layout .counter button {
+  background: var(--brand);
+  color: white;
+  border: 0;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
+}
+.slidev-layout .counter button:focus-visible { outline: 3px solid #c67825; outline-offset: 4px; }
+.slidev-layout .counter output { min-width: 3ch; text-align: center; font-weight: 700; }
+.slidev-layout .counter .reset { background: #e8eef1; color: var(--ink); font-size: 18px; }

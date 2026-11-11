@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "node scripts/slidev.mjs dev",
     "build": "node scripts/slidev.mjs build",
+    "preview": "node scripts/preview.mjs",
     "export": "node scripts/slidev.mjs export",
     "check:render": "node scripts/check-render.mjs"
   },
@@ -16,5 +17,5 @@
   "devDependencies": {
     "playwright-chromium": "^1.58.0"
   },
-  "engines": { "node": ">=22.12.0" }
+  "engines": { "node": ">=22.22.0" }
 }

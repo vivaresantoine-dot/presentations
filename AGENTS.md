@@ -7,4 +7,5 @@
 - Conserver `addons: ['@/../..']` dans chaque présentation pour charger les ressources communes et la configuration Vite racine (`@/` désigne le dossier de `slides.md`).
 - Conserver le format 16:9 et les polices locales ; éviter les ressources distantes.
 - Vérifier `npm run build` et `npm run check:render` après une modification des ressources communes.
+- Pour GitHub Pages : `npm run build -- --base /presentations/`, puis `npm run check:render -- --base /presentations/`. La construction impose le routage hash ; conserver le préfixe du site pour l’accueil et chaque présentation.
 - Rester en local : aucune publication ni aucun déploiement sans demande explicite.

@@ -1,0 +1,68 @@
+name: Publier sur GitHub Pages
+
+# Publication après un push sur main, ou depuis le bouton « Run workflow ».
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Le code est seulement lu ; aucun commit automatique n’est créé.
+permissions:
+  contents: read
+
+# Un déploiement à la fois. Laisser le déploiement en cours se terminer.
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read  # configure-pages lit les paramètres existants.
+    # Chromium est utile pour les PDF/tests, pas pour construire le site statique.
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+    steps:
+      - name: Récupérer les sources du commit
+        uses: actions/checkout@v6
+
+      - name: Installer Node.js 24 LTS et activer le cache npm
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Lire la configuration Pages du dépôt
+        uses: actions/configure-pages@v5
+
+      - name: Installer les versions verrouillées
+        run: npm ci
+
+      # Même chaîne qu’en local ; --base représente la racine du site complet.
+      - name: Construire l’accueil et toutes les présentations
+        run: npm run build -- --base /presentations/
+
+      # Seul dist/ sera publié, jamais les sources ou node_modules/.
+      - name: Préparer le site comme artefact Pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    # Un échec de construction empêche ce job de démarrer.
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write     # Autorise la publication du site Pages.
+      id-token: write  # Identité temporaire OIDC vérifiée par GitHub Pages.
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publier l’artefact sur GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

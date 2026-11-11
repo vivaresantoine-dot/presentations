@@ -6,6 +6,8 @@
 /* Les layouts ordinaires du thème doivent remplir la hauteur du canevas. */
 .slidev-layout {
   height: 100%;
+  background-color: #202020;
+  color: #f5f5f5;
 }
 
 .slidev-layout .photo {
@@ -15,4 +17,15 @@
   max-width: 100%;
   object-fit: contain;
   margin: 16px auto 0;
+}
+
+.slidev-layout.intro-image {
+  margin: 0;
+  background-size: auto 85% !important;
+  background-position: right 24px center !important;
+}
+
+.slidev-layout.intro-image .titre-couverture {
+  left: 50px;
+  width: 50%;
 }

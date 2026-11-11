@@ -9,7 +9,7 @@ aspectRatio: 16/9
 canvasWidth: 980
 colorSchema: light
 fonts:
-  webfonts: false
+  provider: none
   sans: Arial
 transition: fade
 drawings:
@@ -30,12 +30,11 @@ import '../../styles/petite-danseuse.css'
   </span>
 </div>
 
-<div class="absolute bottom-10">
-  <h1>La Petite Danseuse de quatorze ans · 01</h1>
-  <p>Presentation subtitle</p>
+<div class="absolute bottom-10 titre-couverture">
+  <h1>La Petite Danseuse de quatorze ans</h1>
+  <p>Une sculpture d'Edgar Degas</p>
 </div>
 
-Texte.
 
 ---
 

@@ -1,10 +1,10 @@
 ---
-theme: default
+theme: apple-basic
 addons:
   - '@/../..'
-title: Un atelier pour avancer
-info: Seconde présentation de validation des ressources communes.
-author: Équipe présentations
+title: La Petite Danseuse de quatorze ans
+info: Présentation faite par et pour Hortense.
+author: Hortense
 aspectRatio: 16/9
 canvasWidth: 980
 colorSchema: light
@@ -14,17 +14,36 @@ fonts:
 transition: fade
 drawings:
   enabled: false
+
+layout: intro-image
+image: '/images/Danceuse-vue-face.jpg'
+
 ---
 
-<p class="eyebrow">Atelier · 02</p>
+<script setup>
+import '../../styles/petite-danseuse.css'
+</script>
 
-# Un atelier pour avancer
+<div class="absolute top-10">
+  <span class="font-700">
+    Hortense Vivares
+  </span>
+</div>
 
-Partager les idées et choisir ensemble la prochaine étape.
+<div class="absolute bottom-10">
+  <h1>La Petite Danseuse de quatorze ans · 01</h1>
+  <p>Presentation subtitle</p>
+</div>
+
+Texte.
 
 ---
 
 # Passer de l’idée à l’action
+
+<script setup>
+import '../../styles/petite-danseuse.css'
+</script>
 
 1. Écrire les propositions de chacun.
 2. Clarifier le résultat attendu.
@@ -35,6 +54,10 @@ Partager les idées et choisir ensemble la prochaine étape.
 ---
 
 # Compter les contributions
+
+<script setup>
+import '../../styles/petite-danseuse.css'
+</script>
 
 Le même composant et les mêmes styles sont utilisés dans les deux présentations.
 

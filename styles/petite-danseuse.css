@@ -1,0 +1,18 @@
+/* Personnalisations propres à petite-danseuse.
+   Le thème apple-basic conserve la gestion des titres, du fond et des marges.
+   Cette classe s’applique aux balises <img class="photo">,
+   pas aux images d’arrière-plan du layout intro-image. */
+
+/* Les layouts ordinaires du thème doivent remplir la hauteur du canevas. */
+.slidev-layout {
+  height: 100%;
+}
+
+.slidev-layout .photo {
+  display: block;
+  width: auto;
+  height: 200px;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 16px auto 0;
+}

@@ -7,7 +7,7 @@ info: Présentation faite par et pour Hortense.
 author: Hortense
 aspectRatio: 16/9
 canvasWidth: 980
-colorSchema: light
+colorSchema: dark
 fonts:
   provider: none
   sans: Arial
@@ -36,30 +36,49 @@ import '../../styles/petite-danseuse.css'
 </div>
 
 
+--- 
+layout: image-right
+image: '/images/02-004924.jpg'
 ---
 
-# Passer de l’idée à l’action
+# Sommaire de la présentation
 
-<script setup>
-import '../../styles/petite-danseuse.css'
-</script>
+* Le contexte, la période, l'artiste.
+* Le modèle, qui est la petite danseuse ?
+* Mais comment faire une sculture en bronze ?
+* L'oeuvre et sa réception
 
-1. Écrire les propositions de chacun.
-2. Clarifier le résultat attendu.
-3. Présenter une prochaine étape concrète.
-
-<img class="local-visual" src="/images/parcours.svg" alt="Trois étapes : écrire, personnaliser, présenter." />
 
 ---
+layout: section
+---
 
-# Compter les contributions
+# Le contexte, Paris, fin du XIXème siècle
 
-<script setup>
-import '../../styles/petite-danseuse.css'
-</script>
+---
+layout: 3-images
+imageLeft: '/images/OperaGarnier.png'
+imageTopRight: '/images/Train.png'
+imageBottomRight: '/images/Gervaise.png'
+---
 
-Le même composant et les mêmes styles sont utilisés dans les deux présentations.
 
-<Compteur :initial="3" />
+---
+layout: statement
+---
 
-Choisissez une action à tester dès la prochaine réunion.
+# Et le quotidien des jeunes danseuses ?
+
+---
+layout: image-right
+image: '/images/Danseuses.png'
+---
+
+# Un espoir de vie meilleure
+## Un travail très exigeant
+
+* Certaines danseuses connaissaient la pauvreté
+* Des enfants de familles modestes
+* Un apprentissage qui commençait tôt
+* Un quotidien physiquement éprouvant
+* Des revenus faibles et une grande vulnérabilité
